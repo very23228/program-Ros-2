@@ -41,7 +41,7 @@ class MoverNode(Node):
         if elapsed_time < self.t1:
             msg.linear.x = self.linear_speed
             msg.angular.z = 0.0
-            self.get_logger().info('Maju sisi panjang ...')
+            self.get_logger().info('Maju lurus sisi panjang ...')
         elif elapsed_time < self.t2:
             msg.linear.x = 0.0
             msg.angular.z = self.angular_speed
@@ -49,7 +49,7 @@ class MoverNode(Node):
         elif elapsed_time < self.t3:
             msg.linear.x = self.linear_speed
             msg.angular.z = 0.0
-            self.get_logger().info('Maju sisi lebar ...')
+            self.get_logger().info('Maju lurus sisi lebar ...')
         elif elapsed_time < self.t4:
             msg.linear.x = 0.0
             msg.angular.z = self.angular_speed
@@ -57,7 +57,7 @@ class MoverNode(Node):
         elif elapsed_time < self.t5:
             msg.linear.x = self.linear_speed
             msg.angular.z = 0.0
-            self.get_logger().info('Maju sisi panjang ...')
+            self.get_logger().info('Maju lurus sisi panjang ...')
         elif elapsed_time < self.t6:
             msg.linear.x = 0.0
             msg.angular.z = self.angular_speed
@@ -65,7 +65,7 @@ class MoverNode(Node):
         elif elapsed_time < self.t7:
             msg.linear.x = self.linear_speed
             msg.angular.z = 0.0
-            self.get_logger().info('Maju sisi lebar ...')
+            self.get_logger().info('Maju lurus sisi lebar ...')
         elif elapsed_time < self.t8:
             msg.linear.x = 0.0
             msg.angular.z = self.angular_speed
@@ -73,7 +73,7 @@ class MoverNode(Node):
         else:
             msg.linear.x = 0.0
             msg.angular.z = 0.0
-            self.get_logger().info('Berhenti. Lintasan persegi panjang selesai.')
+            self.get_logger().info('stop. Lintasan persegi panjang telah usai')
             self.publisher_.publish(msg)
             self.timer.cancel()
             rclpy.shutdown()
